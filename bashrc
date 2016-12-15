@@ -6,23 +6,12 @@ HISTFILESIZE=2000
 HISTCONTROL=ignoreboth
 shopt -s histappend
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # Alias definitions.
-alias pacman='pacman --color=auto'
-alias ll='ls -alF'
 alias la='ls -A'
+alias ll='ls -alF'
 alias l='ls -CF'
-
-# Icecc setup
-#export PATH=/usr/lib/icecc/bin:$PATH
+alias ls='ls --color=auto'
+alias pacman='pacman --color=auto'
 
 qt_env_set()
 {
@@ -39,6 +28,4 @@ git_branch_get()
 
 PS1="[\[\e[1;34m\]\u\[\e[m\e[1;32m\]@\h\[\e[m\] \W\[\e[1;33m\]\$(git_branch_get)\[\e[m\]]\$ "
 
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion

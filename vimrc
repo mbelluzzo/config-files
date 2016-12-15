@@ -20,17 +20,14 @@ set incsearch
 
 set encoding=utf8
 
+set spell spelllang=en_us
+
 set expandtab
 set nosmarttab
 set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set cino=(0
-
-" enlightenment
-"set shiftwidth=3
-"set softtabstop=3
-"set cino=>5n-3f0^-2{2(0W1st0
 
 set lbr
 
